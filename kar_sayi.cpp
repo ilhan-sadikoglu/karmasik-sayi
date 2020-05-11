@@ -4,22 +4,22 @@
 
 using namespace std;
 
-void sayi::setGercek(const double &a)//gerçek kısmı düzenler
+void sayi::setGercek(const double &a)//gerÃ§ek kÃ½smÃ½ dÃ¼zenler
 {
 	gercek = a;
 }
 
-void sayi::setKarmasik(const double &a)//gerçek kısmı düzenler
+void sayi::setKarmasik(const double &a)//gerÃ§ek kÃ½smÃ½ dÃ¼zenler
 {
 	karmasik = a;
 }
 
-void sayi::getGercek()const//gerçek kısmı düzenler
+void sayi::getGercek()const//gerÃ§ek kÃ½smÃ½ dÃ¼zenler
 {
 	cout << gercek<<" ";
 }
 
-void sayi::getKarmasik()const//gerçek kısmı düzenler
+void sayi::getKarmasik()const//gerÃ§ek kÃ½smÃ½ dÃ¼zenler
 {
 	cout << " " << karmasik <<"i"<< endl;
 }
@@ -45,60 +45,33 @@ sayi::sayi(int a)//int alan constructer
 
 }
 
-sayi::sayi(double a,double b)//iki değeri  de alan constructer
+sayi::sayi(double a,double b)//iki deÃ°eri  de alan constructer
 {
 	setGercek(a);
 	setKarmasik(b);
 
 }
 
-sayi::sayi(const string& st1)//string alan (boşluklar görmezden geliniyor
-{
-	size_t found;
-	found = st1.find_first_of("+");
 
-	if (found != string::npos) {
-		string st2(st1.begin(), st1.begin() + found);
-		string st3(st1.begin() + found+1, st1.end() - 1);
-		setGercek(std::stoi(st2));
-		setKarmasik(std::stoi(st3));
-	}
-	else {
-		found = st1.find_first_of("-");
-		if (found != string::npos) {
-			string st2(st1.begin(), st1.begin() + found);
-			string st3(st1.begin() + found + 1, st1.end() - 1);
-			setGercek(std::stoi(st2));
-			setKarmasik(-std::stoi(st3));
-		}
-		else setGercek(std::stoi(st1));
-	}
-	
-	
-
-	
-}
-
-
-void sayi::print() {//nesnenin reel ve karmaşık kısmını yazdıram constructer
+void sayi::print() {//nesnenin reel ve karmaÃ¾Ã½k kÃ½smÃ½nÃ½ yazdÃ½ram constructer
 	getGercek();
 	cout << "+";
 	getKarmasik();
 }
 
-void sayi::subtract(const sayi &x) {//çıkarma işlemi
+void sayi::subtract(const sayi &x) {//Ã§Ã½karma iÃ¾lemi
 	this->gercek -= x.gercek;
 	this->karmasik -= x.karmasik;
 
 }
 
-void sayi::add(const sayi& x) {//çıkarma işlemi
+void sayi::add(const sayi& x) {//Ã§Ã½karma iÃ¾lemi
 	this->gercek += x.gercek;
 	this->karmasik += x.karmasik;
 
 }
 
-void sayi::divide(const sayi& x) {//bölme işlemi
+void sayi::divide(const sayi& x) {//bÃ¶lme iÃ¾lemi
 	this->gercek /= x.gercek;
 	this->karmasik /= x.karmasik;
 
