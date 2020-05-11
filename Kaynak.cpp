@@ -3,7 +3,7 @@
 
 int main(){
 
-	sayi s1;//varsayılan
+	sayi s1;//varsayÃ½lan
 	sayi s2(10);//int alan
 	sayi s3(3.14);//double alan
 	sayi s4(3, 18);//ikisini de alan
@@ -18,11 +18,7 @@ int main(){
 	s3.getKarmasik();
 	s4.getGercek();
 	s4.getKarmasik();
-	s5.getGercek();
-	s5.getKarmasik();
-	s6.getGercek();
-	s6.getKarmasik();
-
+	
 	s1.setGercek(12);
 	s1.setKarmasik(14);
 	s2.setGercek(16);
@@ -37,9 +33,7 @@ int main(){
 	s2.print();
 	s3.print();
 	s4.print();
-	s5.print();
-	s6.print();
-
+	
 	cout << "\ntoplama" << endl;
 	s1.add(s2);
 	s1.print();
